@@ -33,6 +33,14 @@ android {
 
     compileSdkVersion 33
 
+      buildTypes {
+        release {
+            minifyEnabled true      // 👈 THIS IS REQUIRED
+            //shrinkResources true    // optional, but recommended
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

@@ -26,6 +26,14 @@ android {
     namespace "com.example.softposafs_plugin_example"
     compileSdk 33  // 👈 Use "compileSdk" instead of "compileSdkVersion" (newer AGP syntax)
 
+     buildTypes {
+        release {
+            minifyEnabled true
+            //shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
